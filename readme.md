@@ -1,0 +1,1 @@
+<p>This code generates a string of random characters, the length is up to you. The resulting string can be used for a variety of things. For example: password.</p>
