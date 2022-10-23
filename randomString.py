@@ -1,4 +1,3 @@
-randint = __import__('random').randint
 choice = __import__('random').choice
 
 def RandomString(a, abcCase, intCase) -> str:
