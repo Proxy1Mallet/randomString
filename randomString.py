@@ -1,8 +1,4 @@
-def RandomString(lang : str, intCase) -> str:
-    if lang == 'RU': abcCase = 'абвгдеёжзсийклмнопрстуфхччъьэюя'
-    else: abcCase = 'abcdefghijklmnopqrstuvwxyz'
-
-    a = ''.join(__import__('random').choices(f'{abcCase} {intCase}', k=462))
+def RandomString(intCase, abcCase) -> str:
+    a = ''.join(__import__('random').choices(f'{abcCase} {intCase}', k=int(input('Number of characters >>> '))))
     return a
-
-print(RandomString(lang='RU', intCase='123456789'))
+print(RandomString(intCase='123456789', abcCase = 'abcdefghijklmnopqrstuvwxyz'))
