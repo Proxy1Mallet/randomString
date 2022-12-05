@@ -1,13 +1,10 @@
-choice = __import__('random').choice
+from random import choices
 
-def RandomString(a, lang : str, intCase : str) -> str:
-    if lang == 'RU': abcCase = 'абвгдеёжзийклмопрстуфхцчъьэюя'
-    else: abcCase = 'abcdefghijklmnopqrstuvwzyz'
+def RandomString(lang : str, intCase) -> str:
+    if lang == 'RU': abcCase = 'абвгдеёжзсийклмнопрстуфхччъьэюя'
+    else: abcCase = 'abcdefghijklmnopqrstuvwxyz'
 
-    for _ in range(int(input('input >>> '))):
-        a += choice([str(choice(abcCase)).upper(), str(choice(abcCase)), choice(intCase)])
+    a = ''.join(choices(f'{abcCase} {intCase}', k=462))
     return a
 
-print(RandomString(a = '',
-                   lang = 'RU',
-                   intCase = '123456789'))
+print(RandomString(lang='RU', intCase='123456789'))
